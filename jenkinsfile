@@ -1,9 +1,16 @@
 pipeline{
+environment{
+PATH="C:\Program Files\apache-maven-3.3.9\bin:$PATH"
+}
     agent any
         stages{
             stage("Git Checkout"){
                 steps{
                     echo "checkout completed"
+                }
+                
+                stage("Maven Build"){
+                sh "mvn clean package"
                 }
             }
               
