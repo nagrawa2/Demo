@@ -3,10 +3,10 @@ pipeline{
         stages{
             stage("Git Checkout"){
                 steps{
-                    git 'https://github.com/nagrawa2/Demo.git'
+                    echo "checkout completed"
                 }
             }
-                
+              
             
             
         }
