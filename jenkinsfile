@@ -1,0 +1,14 @@
+node{
+    agent any
+        stages{
+            stage("Git cCheckout"){
+                steps{
+                    git 'https://github.com/nagrawa2/Demo.git'
+                }
+            }
+                
+            
+            
+        }
+    
+}
