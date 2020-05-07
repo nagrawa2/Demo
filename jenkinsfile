@@ -8,15 +8,22 @@ pipeline{
                 }
                 
                 stage("build"){
+                steps{
                 echo "build successfull"
                 }
+                }
                 stage("Test"){
+                steps{
                 echo "Testing successfull"
                 }
+                }
                 stage("Deploy"){
+                steps{
                 echo "deployment is  successfull"
                 }
+                }
             }
+            
               
             
             
