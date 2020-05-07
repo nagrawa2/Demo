@@ -10,7 +10,7 @@ pipeline{
                 }
                 
                 stage("Maven build"){
-                steps{
+                script{
                 echo "build successfull"
                 mvn package
                 }
