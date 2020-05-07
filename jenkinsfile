@@ -6,6 +6,7 @@ pipeline{
                 steps{
                     echo "checkout completed"
                 }
+                }
                 
                 stage("build"){
                 steps{
@@ -29,4 +30,5 @@ pipeline{
             
         
     
+
 }
