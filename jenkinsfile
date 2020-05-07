@@ -12,7 +12,7 @@ pipeline{
                 stage("Maven build"){
                 steps{
                 echo "build successfull"
-                mvn clean package
+                mvn clean
                 }
                  }
                 stage("Test"){
