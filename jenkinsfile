@@ -1,12 +1,8 @@
 node{
 
     agent any
-    
-      environment{
-      PATH="C:\apache-maven-3.3.9\bin:$PATH"
-      }
-      
-            stage("Git Checkout"){
+   
+         stage("Git Checkout"){
                 steps{
                     echo "checkout completed"
                 }
