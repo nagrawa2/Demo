@@ -1,9 +1,7 @@
 pipeline{
 
     agent any
-    enivironment{
-    PATH="C:\apache-maven-3.3.9\bin:$PATH"
-    }
+    
          stages{
             stage("Git Checkout"){
                 steps{
@@ -13,8 +11,9 @@ pipeline{
                 
                 stage("Maven build"){
                 steps{
+                def mvnhome= tool name: 'maven', type: 'maven'
                 echo "build successfull"
-                sh "mvn clean package"
+                sh "${mvnhome}/bin/mvn package"
                 }
                 }
                 stage("Test"){
