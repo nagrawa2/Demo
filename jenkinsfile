@@ -1,7 +1,7 @@
 pipeline{
 
     agent any
-    
+      def mvnhome = tool name: 'maven', type: 'maven'
          stages{
             stage("Git Checkout"){
                 steps{
@@ -10,9 +10,10 @@ pipeline{
                 }
                 
                 stage("Maven build"){
-                def mvnhome = tool name: 'maven', type: 'maven'
+                steps{
                 echo "build successfull"
                 sh "${mvnhome}/bin/mvn package"
+                }
                  }
                 stage("Test"){
                 steps{
