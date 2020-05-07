@@ -1,8 +1,11 @@
 node{
 
     agent any
-      def mvnhome = tool name: 'maven', type: 'maven'
-         stages{
+    
+      environment{
+      PATH="C:\apache-maven-3.3.9\bin:$PATH"
+      }
+      
             stage("Git Checkout"){
                 steps{
                     echo "checkout completed"
@@ -12,7 +15,7 @@ node{
                 stage("Maven build"){
                 steps{
                 echo "build successfull"
-                sh "${mvnhome}/bin/mvn package"
+                sh "mvn clean package"
                 }
                  }
                 stage("Test"){
