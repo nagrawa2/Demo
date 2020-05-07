@@ -1,6 +1,6 @@
 pipeline{
 
-    agent {docker {image 'maven:3.3.9'}}
+    agent any
     stages{
    
          stage("Git Checkout"){
@@ -12,7 +12,7 @@ pipeline{
                 stage("Maven build"){
                 steps{
                 echo "build successfull"
-               sh'mvn package'
+               bat label: '', script: 'mvn clean install'
                 }
                  }
                 stage("Test"){
